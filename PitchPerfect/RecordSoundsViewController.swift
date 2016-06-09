@@ -19,23 +19,12 @@ class RecordSoundsViewController: UIViewController , AVAudioRecorderDelegate {
     var audioRecorder: AVAudioRecorder!
     
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-    
     override func viewWillAppear(animated: Bool) {
         stopRecording_button.enabled = false
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
 
     @IBAction func recordAudio(sender: AnyObject) {
-        print("record button")
         record_label.text = "Recording Audio"
         stopRecording_button.enabled = true
         record_button.enabled = false
@@ -49,7 +38,6 @@ class RecordSoundsViewController: UIViewController , AVAudioRecorderDelegate {
         
         //this creates the path for the file, then PRINTS it
         let filePath = NSURL.fileURLWithPathComponents(pathArray)
-        print(filePath)
         
         //grab the session!!! grab the single instance of the av audiosession
         let session = AVAudioSession.sharedInstance()
@@ -63,7 +51,6 @@ class RecordSoundsViewController: UIViewController , AVAudioRecorderDelegate {
     }
     
     @IBAction func stopRecording(sender: AnyObject) {
-        print("stop recording button")
         record_label.text = "NOT Recording Audio"
         stopRecording_button.enabled = false
         record_button.enabled = true
@@ -74,7 +61,6 @@ class RecordSoundsViewController: UIViewController , AVAudioRecorderDelegate {
     }
     
     func audioRecorderDidFinishRecording(recorder: AVAudioRecorder, successfully flag: Bool){
-        print("AVAudioRecorder finished saving recording")
         if (flag){
             self.performSegueWithIdentifier("stopRecording", sender: audioRecorder.url)
         }

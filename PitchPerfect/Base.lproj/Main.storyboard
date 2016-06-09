@@ -214,13 +214,13 @@
         </scene>
     </scenes>
     <resources>
-        <image name="chipmunkbutton" width="200" height="200"/>
-        <image name="darthvaderbutton" width="200" height="200"/>
-        <image name="echobutton" width="160" height="160"/>
-        <image name="rabbitbutton" width="200" height="200"/>
+        <image name="chipmunkbutton" width="100" height="100"/>
+        <image name="darthvaderbutton" width="100" height="100"/>
+        <image name="echobutton" width="80" height="80"/>
+        <image name="rabbitbutton" width="100" height="100"/>
         <image name="recordbutton" width="100" height="100"/>
-        <image name="reverbbutton" width="160" height="160"/>
-        <image name="snailbutton" width="200" height="200"/>
+        <image name="reverbbutton" width="80" height="80"/>
+        <image name="snailbutton" width="100" height="100"/>
         <image name="stoprecordingbutton" width="50" height="50"/>
     </resources>
 </document>
